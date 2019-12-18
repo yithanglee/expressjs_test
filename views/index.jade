@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  div
+   table
+    tr
+     th User Name
+     th Current Ranking
+     th(colspan=2)
+    tr
+     td
+      input(name="username")
+     td
+      select(name="ranking")
+     td
+      button Select
+     td
+      button(onClick="location.reload()") Clear
+  div
+   h2(id="username")
+   table
+    thead
+     tr
+      th Products
+      th Price
+      th Action
+      th Qty
+    tbody(style="display:none;" id="products")
+   h2(id="total")
